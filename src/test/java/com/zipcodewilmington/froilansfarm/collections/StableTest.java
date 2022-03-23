@@ -4,6 +4,8 @@ import com.zipcodewilmington.froilansfarm.subclasses.Horse;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 public class StableTest {
@@ -16,6 +18,16 @@ public class StableTest {
         horsePen.add(horsey);
 
         Assert.assertTrue(horsePen.contains(horsey));
+    }
+
+    @Test
+    public void getResidentsTest(){
+        Stable horsePen = new Stable();
+        Horse horsey = new Horse("Bob");
+        horsePen.add(horsey);
+        List<Horse> horses = horsePen.getResidents();
+
+        Assert.assertTrue(horses.contains(horsey));
     }
 
 }
