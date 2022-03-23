@@ -6,10 +6,7 @@ import com.zipcodewilmington.froilansfarm.superclasses.Edible;
 import com.zipcodewilmington.froilansfarm.superclasses.Vehicle;
 
 public class Tractor extends Vehicle implements Harvest {
-    @Override
-    public Boolean harvestCrop(Crop crop) {
-        return null;
-    }
+
 
     @Override
     public String makeNoise() {
@@ -19,6 +16,11 @@ public class Tractor extends Vehicle implements Harvest {
     @Override
     public void ride() {
 
+    }
+
+    @Override
+    public Boolean harvestCrop(Object crop) {
+        return null;
     }
 }
 
