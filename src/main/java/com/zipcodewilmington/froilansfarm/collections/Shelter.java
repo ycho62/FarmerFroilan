@@ -5,7 +5,7 @@ import com.zipcodewilmington.froilansfarm.subclasses.Horse;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract  class Shelter <T> {
+public abstract class Shelter <T> {
     List<T> residents = new ArrayList<T>();
 
 
@@ -18,4 +18,7 @@ public abstract  class Shelter <T> {
     }
 
 
+    public List<T> getResidents() {
+        return residents;
+    }
 }
