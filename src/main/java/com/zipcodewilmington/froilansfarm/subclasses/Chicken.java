@@ -16,7 +16,7 @@ Egg egg = new Egg();
 
     @Override
     public String makeNoise() {
-        return null;
+        return "Squawkadoodledoo";
     }
 
     @Override

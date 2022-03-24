@@ -5,6 +5,8 @@ import com.zipcodewilmington.froilansfarm.superclasses.Edible;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 class ChickenTest {
 
     @Test
@@ -22,6 +24,10 @@ class ChickenTest {
 
     @Test
     void makeNoiseTest() {
+        Chicken testChicken = new Chicken();
+        String chickenSound = testChicken.makeNoise();
+        Assert.assertTrue(chickenSound instanceof String);
+
     }
 
     @Test
