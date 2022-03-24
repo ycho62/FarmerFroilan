@@ -3,6 +3,7 @@ package com.zipcodewilmington.froilansfarm.subclasses;
 import com.zipcodewilmington.froilansfarm.interfaces.Rideable;
 import com.zipcodewilmington.froilansfarm.superclasses.Animal;
 import com.zipcodewilmington.froilansfarm.superclasses.Edible;
+import com.zipcodewilmington.froilansfarm.superclasses.Person;
 
 public class Horse extends Animal implements Rideable {
     public final String name;
@@ -22,7 +23,7 @@ public class Horse extends Animal implements Rideable {
     }
 
     @Override
-    public void ride() {
+    public void ride(Person person) {
 
     }
 }

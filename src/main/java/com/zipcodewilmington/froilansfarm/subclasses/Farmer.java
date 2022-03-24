@@ -7,9 +7,9 @@ import java.util.Locale;
 
 public class Farmer extends Person implements Botanist, Rider {
 
+    private Boolean riding = false;
 
     public Farmer(){
-
     }
 
     public Farmer(String name) {
@@ -45,16 +45,31 @@ public class Farmer extends Person implements Botanist, Rider {
         return "Waking up real earlivee these days";
     }
 
+
     @Override
-    public void mount() {
-
-
-
+    public void mountAnimal(Horse horse) {
+        riding = true;
+        horse.ride(this);
     }
 
     @Override
-    public void dismount() {
+    public void mountVehicle(Vehicle vehicle) {
+        riding = true;
+        vehicle.ride(this);
+    }
+
+    @Override
+    public void dismountAnimal(Horse object) {
+
+        riding = false;
+    }
+
+    @Override
+    public void dismountVehicle(Vehicle object) {
+        riding = false;
 
     }
+
+
 }
 
