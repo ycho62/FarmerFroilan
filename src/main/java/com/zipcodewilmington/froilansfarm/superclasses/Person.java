@@ -28,10 +28,7 @@ public abstract class Person implements Eater, Noisemaker {
         return name;
     }
 
-    public void Eat(Edible food){
-        eatenMeals.add(food);
-        hungerSatisfied = true;
-    }
+
 
     public int getMealsEaten() {
         return eatenMeals.size();

@@ -13,10 +13,7 @@ public class Chicken extends Animal implements Produce {
 
 
 
-    @Override
-    public void Eat(Edible food) {
 
-    }
 
     @Override
     public String makeNoise() {
@@ -34,5 +31,10 @@ public class Chicken extends Animal implements Produce {
 
     public void setHasBeenFertilized(Boolean hasBeenFertilized) {
         this.hasBeenFertilized = hasBeenFertilized;
+    }
+
+    @Override
+    public <T extends Edible> void eat(T food) {
+
     }
 }

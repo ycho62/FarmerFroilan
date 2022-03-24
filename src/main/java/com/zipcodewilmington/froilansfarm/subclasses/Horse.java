@@ -11,10 +11,6 @@ public class Horse extends Animal implements Rideable {
    this.name = name;
     }
 
-    @Override
-    public void Eat(Edible food) {
-
-    }
 
     @Override
     public String makeNoise() {
@@ -23,6 +19,11 @@ public class Horse extends Animal implements Rideable {
 
     @Override
     public void ride() {
+
+    }
+
+    @Override
+    public <T extends Edible> void eat(T food) {
 
     }
 }
