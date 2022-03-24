@@ -43,7 +43,7 @@ class ChickenTest {
         Chicken testChicken = new Chicken();
         testChicken.setFertilized(true);
         Edible actual = testChicken.yield();
-        Assert.assertEquals(actual, null);
+        Assert.assertFalse(actual instanceof Egg);
 
     }
 
