@@ -3,11 +3,20 @@ package com.zipcodewilmington.froilansfarm.subclasses;
 import com.zipcodewilmington.froilansfarm.interfaces.Rideable;
 import com.zipcodewilmington.froilansfarm.superclasses.Animal;
 import com.zipcodewilmington.froilansfarm.superclasses.Edible;
+import com.zipcodewilmington.froilansfarm.superclasses.Person;
+
+import java.util.ArrayList;
 
 public class Horse extends Animal implements Rideable {
-    public final String name;
+
+    ArrayList<Person> riderList = new ArrayList<>();
+
+    private Boolean mounted = false;
+
+    public Horse(){}
+
     public Horse(String name) {
-   this.name = name;
+        super(name);
     }
 
 
@@ -17,8 +26,22 @@ public class Horse extends Animal implements Rideable {
     }
 
     @Override
-    public void ride() {
+    public void ride(Person person) {
+        riderList.add(person);
+        mounted = true;
+    }
 
+    @Override
+    public void unride(Person person) {
+        riderList.remove(person);
+        if(riderList.isEmpty()) {
+            mounted = false;
+        }
+    }
+
+    @Override
+    public Boolean getMountStatus() {
+        return mounted;
     }
 
     @Override
