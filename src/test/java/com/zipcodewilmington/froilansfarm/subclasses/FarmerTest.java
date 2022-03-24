@@ -63,25 +63,40 @@ class FarmerTest {
         //Given
         Farmer farmer1 = new Farmer("Joe");
         Cornstalk cornie = new Cornstalk();
+        String choice = "corn";
         CropRow row1 = new CropRow();
 
 
         //When
         //row1.add(cornie);
-        row1.add(farmer1.plant(cornie));
+        row1.add(farmer1.plant(choice));
 
         //Then
-        Assert.assertTrue(row1.contains(cornie));
+        int expected = 1;
+        Assert.assertEquals(row1.size(),expected);
 
     }
 
     @Test
     void makeNoise() {
 
+        Farmer joe = new Farmer("Joe");
+        String speak = joe.makeNoise();
+
+        System.out.println(joe.makeNoise());
+
+        Assert.assertEquals(speak, joe.makeNoise());
     }
 
     @Test
-    void mount() {
+    void mountTest() {
+
+        Farmer roger = new Farmer("Roger");
+        Horse horsejack = new Horse("Jack");
+
+        roger.mount();
+
+
     }
 
     @Test

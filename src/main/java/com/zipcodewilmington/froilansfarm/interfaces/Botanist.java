@@ -4,5 +4,5 @@ import com.zipcodewilmington.froilansfarm.superclasses.Crop;
 
 public interface Botanist {
     //TODO decide how we want to test
-    public Crop plant(Crop typeOfCrop);
+    public Crop plant(String typeOfCrop);
 }
