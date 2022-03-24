@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.collections;
 
+import com.zipcodewilmington.froilansfarm.subclasses.Cornstalk;
 import com.zipcodewilmington.froilansfarm.subclasses.Horse;
 import org.junit.Assert;
 import org.junit.Test;
@@ -29,5 +30,6 @@ public class StableTest {
 
         Assert.assertTrue(horses.contains(horsey));
     }
+
 
 }

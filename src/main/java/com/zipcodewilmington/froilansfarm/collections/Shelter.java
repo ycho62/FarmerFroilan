@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Shelter <T> {
-    List<T> residents = new ArrayList<T>();
+    private final List<T> residents = new ArrayList<T>();
 
 
     public void add(T animal){
