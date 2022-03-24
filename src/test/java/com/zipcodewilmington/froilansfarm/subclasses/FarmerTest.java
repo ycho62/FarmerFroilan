@@ -94,7 +94,7 @@ class FarmerTest {
         Farmer roger = new Farmer("Roger");
         Horse horsejack = new Horse("Jack");
 
-        roger.mount();
+        //roger.mount();
 
 
     }
