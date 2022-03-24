@@ -6,7 +6,8 @@ import com.zipcodewilmington.froilansfarm.superclasses.Vehicle;
 
 public class Tractor extends Vehicle implements Harvest {
 
-    private boolean mounted = false;
+    private Boolean mounted = false;
+
 
     public Tractor(String name) {
         super(name);
@@ -21,6 +22,19 @@ public class Tractor extends Vehicle implements Harvest {
     public void ride(Person person) {
         ridersList().add(person);
         mounted = true;
+    }
+
+    @Override
+    public void unride(Person person) {
+        ridersList().remove(person);
+        if(ridersList().isEmpty()){
+            mounted = false;
+        }
+    }
+
+    @Override
+    public Boolean getMountStatus() {
+        return mounted;
     }
 
     @Override

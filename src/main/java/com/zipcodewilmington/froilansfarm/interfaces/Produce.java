@@ -8,5 +8,4 @@ public interface Produce <T extends Edible> {
 //     public <T extends Edible> yield (Boolean isFertilized, Boolean isHarvested);
 
 
-
 }

@@ -9,6 +9,7 @@ import java.util.List;
 public abstract class Vehicle implements Noisemaker, Rideable {
 
     List<Person> riderList = new ArrayList<Person>();
+    private Boolean mounted = false;
 
     private String name;
 
@@ -32,5 +33,10 @@ public abstract class Vehicle implements Noisemaker, Rideable {
 
     public void ride(Person person){
         riderList.add(person);
+        mounted = true;
     };
+
+    public Boolean getMountStatus(){
+        return mounted;
+    }
 }

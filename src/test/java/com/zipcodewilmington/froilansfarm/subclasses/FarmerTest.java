@@ -94,12 +94,23 @@ class FarmerTest {
         Farmer roger = new Farmer("Roger");
         Horse horsejack = new Horse("Jack");
 
-        //roger.mount();
+        roger.mountAnimal(horsejack);
 
+        Assert.assertTrue(horsejack.riderList.contains(roger));
 
     }
 
     @Test
     void dismount() {
+        //Given
+        Farmer roger = new Farmer("Roger");
+        Horse horsejack = new Horse("Jack");
+
+        //When
+        roger.mountAnimal(horsejack);
+        roger.dismountAnimal(horsejack);
+
+        Assert.assertFalse(horsejack.getMountStatus());
+
     }
 }
