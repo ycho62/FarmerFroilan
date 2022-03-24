@@ -4,19 +4,36 @@ import com.zipcodewilmington.froilansfarm.interfaces.*;
 import com.zipcodewilmington.froilansfarm.superclasses.*;
 
 public class Farmer extends Person implements Botanist, Rider {
-    @Override
-    public <T extends Crop> Boolean plant(T typeOfCrop) {
-        return null;
-    }
 
 
-    @Override
-    public void Eat(Edible food) {
+    public Farmer(){
 
     }
+
+    public Farmer(String name) {
+        super(name);
+    }
+
+    @Override
+    public Crop plant(Crop typeOfCrop) {
+        return typeOfCrop;
+    }
+
+//    public <T extends Crop> Boolean plant(T typeOfCrop) {
+//
+//        return null;
+//    }
+
+
+//    @Override
+//    public void Eat(Edible food) {
+//
+//    }
 
     @Override
     public String makeNoise() {
+
+
         return null;
     }
 
