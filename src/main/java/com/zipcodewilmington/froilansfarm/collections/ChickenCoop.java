@@ -5,5 +5,6 @@ import com.zipcodewilmington.froilansfarm.subclasses.Chicken;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ChickenCoop <Chicken> extends Shelter {
+public class ChickenCoop extends Shelter<Chicken> {
+
 }
