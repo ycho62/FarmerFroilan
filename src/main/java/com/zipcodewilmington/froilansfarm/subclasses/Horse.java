@@ -19,14 +19,10 @@ public class Horse extends Animal implements Rideable {
         super(name);
     }
 
-    @Override
-    public void Eat(Edible food) {
-
-    }
 
     @Override
     public String makeNoise() {
-        return "Horse go neeigh:";
+        return "Neigh!";
     }
 
     @Override
@@ -46,5 +42,10 @@ public class Horse extends Animal implements Rideable {
     @Override
     public Boolean getMountStatus() {
         return mounted;
+    }
+
+    @Override
+    public <T extends Edible> void eat(T food) {
+
     }
 }

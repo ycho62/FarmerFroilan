@@ -35,7 +35,7 @@ public class Farmer extends Person implements Botanist, Rider {
 
 
 //    @Override
-//    public void Eat(Edible food) {
+//    public void eat(Edible food) {
 //
 //    }
 
@@ -71,6 +71,11 @@ public class Farmer extends Person implements Botanist, Rider {
 
     }
 
+
+    @Override
+    public <T extends Edible> void eat(T food) {
+
+    }
 
 }
 
