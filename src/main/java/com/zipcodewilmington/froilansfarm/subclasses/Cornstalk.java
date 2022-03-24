@@ -5,9 +5,13 @@ import com.zipcodewilmington.froilansfarm.superclasses.Crop;
 import com.zipcodewilmington.froilansfarm.superclasses.Edible;
 
 public class Cornstalk extends Crop implements Produce {
+    public Cornstalk() {}
 
     @Override
-    public <T extends Edible> T yield(Produce producer) {
+    public EarCorn yield() {
+        if (!isHarvested()){
+            return new EarCorn();
+        }
         return null;
     }
 }

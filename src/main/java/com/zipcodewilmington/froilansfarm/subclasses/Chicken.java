@@ -5,8 +5,10 @@ import com.zipcodewilmington.froilansfarm.superclasses.Animal;
 import com.zipcodewilmington.froilansfarm.superclasses.Edible;
 
 public class Chicken extends Animal implements Produce {
+Egg egg = new Egg();
 
-    Boolean hasBeenFertilized = false;
+
+    boolean isFertilized = false;
 
     public Chicken(){
 
@@ -14,25 +16,27 @@ public class Chicken extends Animal implements Produce {
 
     @Override
     public String makeNoise() {
-        return null;
+        return "Squawkadoodledoo";
     }
 
     @Override
-    public <T extends Edible> T yield(Produce producer) {
+    public Egg yield() {
+        if (!isFertilized()){
+            return egg;
+        }
         return null;
     }
-
-    public Boolean getHasBeenFertilized() {
-        return hasBeenFertilized;
-    }
-
-    public void setHasBeenFertilized(Boolean hasBeenFertilized) {
-        this.hasBeenFertilized = hasBeenFertilized;
-    }
-
     @Override
 
     public <T extends Edible> void eat(T food) {
         food.setEaten(true);
+    }
+
+    public boolean isFertilized() {
+        return isFertilized;
+    }
+
+    public void setFertilized(boolean fertilized) {
+        isFertilized = fertilized;
     }
 }

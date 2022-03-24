@@ -3,17 +3,14 @@ package com.zipcodewilmington.froilansfarm.superclasses;
 import com.zipcodewilmington.froilansfarm.interfaces.Produce;
 
 public abstract class Crop implements Produce {
-    public Boolean getHasBeenHarvested() {
-        return hasBeenHarvested;
+    boolean isHarvested;
+
+    public boolean isHarvested() {
+        return isHarvested;
     }
 
-    public void setHasBeenHarvested(Boolean hasBeenHarvested) {
-        this.hasBeenHarvested = hasBeenHarvested;
+    public void setHarvested(boolean harvested) {
+        isHarvested = harvested;
     }
-
-    Boolean hasBeenHarvested;
-
-
-
 
 }

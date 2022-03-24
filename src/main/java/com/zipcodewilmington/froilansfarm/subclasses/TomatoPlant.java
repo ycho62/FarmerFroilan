@@ -7,7 +7,7 @@ import com.zipcodewilmington.froilansfarm.superclasses.Edible;
 public class TomatoPlant extends Crop implements Produce {
 
     @Override
-    public <T extends Edible> T yield(Produce producer) {
+    public <T extends Edible> T yield() {
         return null;
     }
 }
