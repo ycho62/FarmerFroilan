@@ -23,11 +23,16 @@ public class StableTest {
 
     @Test
     public void getResidentsTest(){
+
+        //Given
         Stable horsePen = new Stable();
         Horse horsey = new Horse("Bob");
+
+        //When
         horsePen.add(horsey);
         List<Horse> horses = horsePen.getResidents();
 
+        //Then
         Assert.assertTrue(horses.contains(horsey));
     }
 
