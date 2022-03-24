@@ -5,15 +5,12 @@ import com.zipcodewilmington.froilansfarm.superclasses.Animal;
 import com.zipcodewilmington.froilansfarm.superclasses.Edible;
 
 public class Chicken extends Animal implements Produce {
+
     Boolean hasBeenFertilized = false;
 
     public Chicken(){
 
     }
-
-
-
-
 
     @Override
     public String makeNoise() {
@@ -34,7 +31,9 @@ public class Chicken extends Animal implements Produce {
     }
 
     @Override
+
     public <T extends Edible> void eat(T food) {
+
 
     }
 }

@@ -6,7 +6,6 @@ import com.zipcodewilmington.froilansfarm.superclasses.Edible;
 
 public class Horse extends Animal implements Rideable {
     public final String name;
-    Horse neigh;
     public Horse(String name) {
    this.name = name;
     }
@@ -14,7 +13,7 @@ public class Horse extends Animal implements Rideable {
 
     @Override
     public String makeNoise() {
-        return null;
+        return "Neigh!";
     }
 
     @Override

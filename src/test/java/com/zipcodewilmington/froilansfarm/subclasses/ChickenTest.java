@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm.subclasses;
 
 import com.zipcodewilmington.froilansfarm.superclasses.Edible;
+
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -8,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ChickenTest {
 
     @Test
+
     void eatTest() {
         Chicken testChicken = new Chicken();
         Edible testEdible = new Tomato();
@@ -43,5 +45,6 @@ class ChickenTest {
     @Test
     void yieldWhenFertilizedTest() {
     }
+
 
 }
