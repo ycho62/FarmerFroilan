@@ -6,6 +6,9 @@ import com.zipcodewilmington.froilansfarm.superclasses.Edible;
 
 public class Horse extends Animal implements Rideable {
     public final String name;
+    public Horse(){
+        this.name = "JohnSnow";
+    }
     public Horse(String name) {
    this.name = name;
     }

@@ -2,6 +2,8 @@ package com.zipcodewilmington.froilansfarm.interfaces;
 
 import com.zipcodewilmington.froilansfarm.superclasses.Crop;
 
-public interface Harvest <T extends Crop> {
-     public <T> Boolean harvestCrop(T crop);
+import java.util.List;
+
+public interface Harvest {
+     public <T extends Crop> T harvestCrop(List<T> crops);
 }

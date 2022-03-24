@@ -2,8 +2,9 @@ package com.zipcodewilmington.froilansfarm.subclasses;
 
 import com.zipcodewilmington.froilansfarm.interfaces.Harvest;
 import com.zipcodewilmington.froilansfarm.superclasses.Crop;
-import com.zipcodewilmington.froilansfarm.superclasses.Edible;
 import com.zipcodewilmington.froilansfarm.superclasses.Vehicle;
+
+import java.util.List;
 
 public class Tractor extends Vehicle implements Harvest {
 
@@ -18,8 +19,9 @@ public class Tractor extends Vehicle implements Harvest {
 
     }
 
+
     @Override
-    public Boolean harvestCrop(Object crop) {
+    public <T extends Crop> T harvestCrop(List<T> crops) {
         return null;
     }
 }
