@@ -33,7 +33,6 @@ public class Chicken extends Animal implements Produce {
     @Override
 
     public <T extends Edible> void eat(T food) {
-
-
+        food.setEaten(true);
     }
 }

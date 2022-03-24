@@ -1,6 +1,5 @@
 package com.zipcodewilmington.froilansfarm.subclasses;
 
-import com.zipcodewilmington.froilansfarm.collections.CropRow;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
@@ -59,20 +58,20 @@ class FarmerTest {
     @Test
     void plantTest() {
 
-        //Given
-        Farmer farmer1 = new Farmer("Joe");
-        Cornstalk cornie = new Cornstalk();
-        String choice = "corn";
-        CropRow row1 = new CropRow();
-
-
-        //When
-        //row1.add(cornie);
-        row1.add(farmer1.plant(choice));
-
-        //Then
-        int expected = 1;
-        Assert.assertEquals(row1.size(),expected);
+//        //Given
+//        Farmer farmer1 = new Farmer("Joe");
+//        Cornstalk cornie = new Cornstalk();
+//        String choice = "corn";
+//        CropRow row1 = new CropRow();
+//
+//
+//        //When
+//        //row1.add(cornie);
+//        row1.add(farmer1.plant(choice));
+//
+//        //Then
+//        int expected = 1;
+//        Assert.assertEquals(row1.size(),expected);
 
     }
 

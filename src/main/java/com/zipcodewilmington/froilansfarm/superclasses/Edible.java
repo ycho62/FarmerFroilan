@@ -1,15 +1,13 @@
 package com.zipcodewilmington.froilansfarm.superclasses;
 
 public abstract class Edible  {
-    Boolean isEaten;
-    public Boolean getEaten() {
+    boolean isEaten;
+
+    public boolean isEaten() {
         return isEaten;
     }
 
-    public void setEaten(Boolean eaten) {
+    public void setEaten(boolean eaten) {
         isEaten = eaten;
     }
-
-
-
 }
