@@ -2,7 +2,6 @@ package com.zipcodewilmington.froilansfarm.subclasses;
 
 import com.zipcodewilmington.froilansfarm.collections.CropRow;
 import org.junit.Assert;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -33,7 +32,7 @@ class FarmerTest {
         Farmer farmer1 = new Farmer("Bob");
         int expected = 1;
         //When
-        farmer1.Eat(eggie);
+        farmer1.eat(eggie);
 
         //Then
 
@@ -50,8 +49,8 @@ class FarmerTest {
         Farmer farmer1 = new Farmer("Bob");
         int expected = 2;
         //When
-        farmer1.Eat(eggie);
-        farmer1.Eat(ketchup);
+        farmer1.eat(eggie);
+        farmer1.eat(ketchup);
 
         //Then
         assertEquals(expected, farmer1.getMealsEaten());
