@@ -8,6 +8,10 @@ public class Chicken extends Animal implements Produce {
     /** TODO fix the generic for produce
      * @param yieldable
      * @return*/
+    public final String name;
+    public Chicken (String name) {
+        this.name = name;
+    }
     @Override
     public Edible yield(Boolean yieldable) {
         return null;
@@ -20,6 +24,6 @@ public class Chicken extends Animal implements Produce {
 
     @Override
     public String makeNoise() {
-        return null;
+        return "cluck cluck";
     }
 }
