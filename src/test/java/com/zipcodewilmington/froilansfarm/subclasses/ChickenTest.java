@@ -2,6 +2,7 @@ package com.zipcodewilmington.froilansfarm.subclasses;
 
 import com.zipcodewilmington.froilansfarm.superclasses.Edible;
 
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -16,7 +17,7 @@ class ChickenTest {
 
         testChicken.eat(testEdible);
 
-        assertTrue(false);
+        Assert.assertTrue(testEdible.isEaten());
     }
 
 
