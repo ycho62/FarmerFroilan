@@ -58,6 +58,16 @@ public class StableTest {
         //Then
         Assert.assertTrue(horses.contains(horsey));
     }
+    @Test
+    public void getReturnsCorrectShelterType(){
+        Stable horsePen = new Stable();
+        Horse horsey = new Horse("Bob");
 
+        horsePen.add(horsey);
+        Horse expected = horsePen.get(0);
+
+        Assert.assertTrue(expected instanceof Horse);
+
+    }
 
 }
