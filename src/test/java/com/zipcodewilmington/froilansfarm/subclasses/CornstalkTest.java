@@ -9,7 +9,8 @@ class CornstalkTest {
     void yieldNotHarvestedTest() {
         Cornstalk testCornstalk = new Cornstalk();
         testCornstalk.setHarvested(false);
-        Assert.assertTrue(testCornstalk.yield() instanceof EarCorn);
+        Edible actual = testCornstalk.yield();
+        Assert.assertTrue(actual instanceof EarCorn);
     }
 
     @Test
@@ -17,7 +18,7 @@ class CornstalkTest {
         Cornstalk testCornstalk = new Cornstalk();
         testCornstalk.setHarvested(true);
         Edible actual = testCornstalk.yield();
-        Assert.assertFalse(testCornstalk.yield() instanceof EarCorn);
+        Assert.assertFalse(actual instanceof EarCorn);
     }
 
 
