@@ -6,5 +6,5 @@ import com.zipcodewilmington.froilansfarm.superclasses.Person;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Field <T extends CropRow> extends ArrayList<T> implements List<T> {
+public class Field <T> extends ArrayList<T> implements List<T> {
 }

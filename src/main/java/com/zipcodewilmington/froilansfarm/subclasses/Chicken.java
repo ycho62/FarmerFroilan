@@ -5,13 +5,13 @@ import com.zipcodewilmington.froilansfarm.superclasses.Animal;
 import com.zipcodewilmington.froilansfarm.superclasses.Edible;
 
 public class Chicken extends Animal implements Produce {
-    /** TODO fix the generic for produce
-     * @param yieldable
-     * @return*/
-    @Override
-    public Edible yield(Boolean yieldable) {
-        return null;
+    Boolean hasBeenFertilized = false;
+
+    public Chicken(){
+
     }
+
+
 
     @Override
     public void Eat(Edible food) {
@@ -21,5 +21,18 @@ public class Chicken extends Animal implements Produce {
     @Override
     public String makeNoise() {
         return null;
+    }
+
+    @Override
+    public <T extends Edible> T yield(Produce producer) {
+        return null;
+    }
+
+    public Boolean getHasBeenFertilized() {
+        return hasBeenFertilized;
+    }
+
+    public void setHasBeenFertilized(Boolean hasBeenFertilized) {
+        this.hasBeenFertilized = hasBeenFertilized;
     }
 }
