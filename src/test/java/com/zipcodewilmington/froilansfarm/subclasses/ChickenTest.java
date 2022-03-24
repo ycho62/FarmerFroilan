@@ -5,8 +5,6 @@ import com.zipcodewilmington.froilansfarm.superclasses.Edible;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class ChickenTest {
 
     @Test
@@ -23,28 +21,24 @@ class ChickenTest {
 
 
     @Test
-    void yieldTest() {
-    }
-
-    @Test
-    void getHasBeenFertilizedTest() {
-    }
-
-    @Test
-    void setHasBeenFertilizedTest() {
-    }
-
-
-    @Test
     void makeNoiseTest() {
     }
 
     @Test
     void yieldNotFertilizedTest() {
+        Chicken testChicken = new Chicken();
+        testChicken.setFertilized(false);
+        Boolean actual = (testChicken.yield() instanceof Egg);
+        Assert.assertTrue(actual);
     }
 
     @Test
     void yieldWhenFertilizedTest() {
+        Chicken testChicken = new Chicken();
+        testChicken.setFertilized(true);
+        Edible actual = testChicken.yield();
+        Assert.assertEquals(actual, null);
+
     }
 
 

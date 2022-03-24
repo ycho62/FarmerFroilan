@@ -4,6 +4,6 @@ import com.zipcodewilmington.froilansfarm.superclasses.Edible;
 
 public interface Produce {
 
-    public <T extends Edible> T yield(Produce producer);
+    public <T extends Edible> T yield();
 
 }
