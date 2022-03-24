@@ -7,7 +7,11 @@ import com.zipcodewilmington.froilansfarm.superclasses.Edible;
 public class TomatoPlant extends Crop implements Produce {
 
     @Override
-    public <T extends Edible> T yield() {
+    public Tomato yield() {
+        if(!isHarvested()){
+            return new Tomato();
+        }
+
         return null;
     }
 }

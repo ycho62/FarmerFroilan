@@ -13,7 +13,7 @@ class ChickenTest {
 
     void eatTest() {
         Chicken testChicken = new Chicken();
-        Edible testEdible = new Tomato();
+        Tomato testEdible = new Tomato();
 
         testChicken.eat(testEdible);
 
