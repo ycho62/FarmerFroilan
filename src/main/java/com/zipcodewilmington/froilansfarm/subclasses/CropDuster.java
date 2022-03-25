@@ -7,6 +7,15 @@ public class CropDuster extends Aircraft {
 
     private Boolean mounted = false;
 
+    public CropDuster(){
+
+    }
+
+    public CropDuster(String name) {
+        super(name);
+    }
+
+
     @Override
     public void fly() {
 
