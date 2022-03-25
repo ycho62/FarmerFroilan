@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.subclasses;
 
+import com.zipcodewilmington.froilansfarm.collections.CropRow;
+import com.zipcodewilmington.froilansfarm.collections.Field;
 import com.zipcodewilmington.froilansfarm.superclasses.Crop;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
@@ -120,6 +122,29 @@ class CropDusterTest {
         Assert.assertFalse(dust1.flyStatus());
     }
 
+    @Test
+    public void fertalizeFieldTest(){
+
+        //Give
+        Farmer bob = new Farmer("Bob");
+        CropDuster dust1 = new CropDuster("");
+        Field cropField = new Field();
+        CropRow cornstalkCropRow = new CropRow<>();
+        Cornstalk corn1 = new Cornstalk();
+        Cornstalk corn2 = new Cornstalk();
+        cornstalkCropRow.add(corn1);
+        cornstalkCropRow.add(corn2);
+        cropField.add(cornstalkCropRow);
+
+        //When
+        bob.mountVehicle(dust1);
+        dust1.flyTakeoff();
+        //dust1.fertalize(cropField);
+
+        //Then
+
+
+    }
 }
 
 //Given

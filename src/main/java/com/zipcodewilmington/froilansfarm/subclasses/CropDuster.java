@@ -1,6 +1,9 @@
 package com.zipcodewilmington.froilansfarm.subclasses;
 
+import com.zipcodewilmington.froilansfarm.collections.CropRow;
+import com.zipcodewilmington.froilansfarm.collections.Field;
 import com.zipcodewilmington.froilansfarm.superclasses.Aircraft;
+import com.zipcodewilmington.froilansfarm.superclasses.Crop;
 import com.zipcodewilmington.froilansfarm.superclasses.Person;
 
 public class CropDuster extends Aircraft {
@@ -59,4 +62,17 @@ public class CropDuster extends Aircraft {
     @Override
     public Boolean getMountStatus() {return mounted;
     }
+
+    //public void fertalize(Field<CropRow> field) {
+
+//        for(int i = 0; i < field.size(); i++){
+//            for(int j = 0; j < field.get(i).size(); j++){
+//                field.get(i).get(j)
+//
+//            }
+//        }
+
+    //}
+
+
 }

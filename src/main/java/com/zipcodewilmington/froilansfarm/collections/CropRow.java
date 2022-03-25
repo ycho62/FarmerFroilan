@@ -7,7 +7,7 @@ import java.util.List;
 
 public class CropRow<Crop>  {
 
-    List<Crop> crops = new ArrayList<>();
+    List<Crop> crops = new ArrayList<Crop>();
 
     public void add(Crop crop){
         crops.add(crop);
