@@ -28,5 +28,4 @@ class ChickenCoopTest {
         Assert.assertTrue(chickenHouse.contains(chicky));
     }
 
-
 }

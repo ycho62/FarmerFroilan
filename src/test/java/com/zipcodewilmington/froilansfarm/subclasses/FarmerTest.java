@@ -1,7 +1,11 @@
 package com.zipcodewilmington.froilansfarm.subclasses;
 
+
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -109,6 +113,38 @@ class FarmerTest {
         roger.dismountAnimal(horsejack);
 
         Assert.assertFalse(horsejack.getMountStatus());
+
+    }
+
+    @Test
+    void farmerFroilanTest(){
+
+        //Given
+        Farmer froilan = new Farmer("Froilan");
+        Farm froilansFarm = new Farm();
+        froilansFarm.setOwner(froilan);
+        Field field = new Field();
+        CropRow cropRow = new CropRow();
+        ChickenCoop chickenHouse = new ChickenCoop();
+        Chicken chicken1 = new Chicken();
+
+
+        Cornstalk cornRow1 = new Cornstalk();
+        TomatoPlant tomatoRow2 = new TomatoPlant();
+
+
+
+        //
+
+        froilansFarm.add(field);
+        cropRow.add(cornRow1);
+        cropRow.add(tomatoRow2);
+        field.add(cropRow);
+
+
+        //
+        Assert.assertEquals(cropRow.size(), 2);
+        Assert.assertEquals(froilansFarm.getOwner(),froilan);
 
     }
 }

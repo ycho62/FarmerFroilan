@@ -5,14 +5,14 @@ import com.zipcodewilmington.froilansfarm.superclasses.Animal;
 import com.zipcodewilmington.froilansfarm.superclasses.Edible;
 
 public class Chicken extends Animal implements Produce {
+
 Egg egg = new Egg();
 
 
     boolean isFertilized = false;
 
-    public Chicken(){
 
-    }
+    public Chicken () {}
 
     @Override
     public String makeNoise() {
