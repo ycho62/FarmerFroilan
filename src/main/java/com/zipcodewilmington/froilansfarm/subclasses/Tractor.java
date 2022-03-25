@@ -1,7 +1,7 @@
 package com.zipcodewilmington.froilansfarm.subclasses;
 
 import com.zipcodewilmington.froilansfarm.interfaces.Harvest;
-<
+
 import com.zipcodewilmington.froilansfarm.superclasses.Crop;
 
 import com.zipcodewilmington.froilansfarm.superclasses.Person;
