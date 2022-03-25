@@ -125,10 +125,11 @@ class FarmerTest {
     }
 
     @Test
-    void farmerFroilanTest(){
+    void establishingThePlotTest(){
 
         //Given
         Farmer froilan = new Farmer("Froilan");
+        Farmer froilanda = new Farmer("Froilanda");
         Farm froilansFarm = new Farm();
         froilansFarm.setOwner(froilan);
         Field field = new Field();
@@ -137,7 +138,9 @@ class FarmerTest {
         TomatoPlant tomatoRow2 = new TomatoPlant();
         Tractor tractor1 = new Tractor();
         Tractor tractor2 = new Tractor();
-        CropDuster cropDuster = new CropDuster();
+        CropDuster cropDuster = new CropDuster("Flyyy");
+
+        froilanda.mountVehicle(cropDuster);
 
 
         Stable horseHouse1 = new Stable();
@@ -202,6 +205,7 @@ class FarmerTest {
 
 
         //
+        Assert.assertTrue(cropDuster.ridersList().contains(froilanda));
         Assert.assertEquals(horseHouse1.size(), 3);
         Assert.assertEquals(horseHouse2.size(), 3);
         Assert.assertEquals(horseHouse3.size(), 3);
