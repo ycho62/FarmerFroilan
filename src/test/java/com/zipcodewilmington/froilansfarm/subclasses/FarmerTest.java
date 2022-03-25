@@ -66,20 +66,43 @@ class FarmerTest {
     @Test
     void plantTest() {
 
-//        //Given
-//        Farmer farmer1 = new Farmer("Joe");
-//        Cornstalk cornie = new Cornstalk();
-//        String choice = "corn";
-//        CropRow row1 = new CropRow();
-//
-//
-//        //When
-//        //row1.add(cornie);
-//        row1.add(farmer1.plant(choice));
-//
-//        //Then
-//        int expected = 1;
-//        Assert.assertEquals(row1.size(),expected);
+        //Given
+        Farmer farmer1 = new Farmer("Joe");
+        Cornstalk cornie = new Cornstalk();
+        String choice = "corn";
+        CropRow row1 = new CropRow();
+
+
+        //When
+        //row1.add(cornie);
+        row1.add(farmer1.plant(choice));
+
+        //Then
+        int expected = 1;
+        Assert.assertEquals(row1.size(),expected);
+
+    }
+
+    @Test
+    void plantTest2() {
+
+        //Given
+        Farmer farmer1 = new Farmer("Joe");
+        Cornstalk cornie = new Cornstalk();
+        String choice = "tomato";
+        CropRow row1 = new CropRow();
+
+
+        //When
+        //row1.add(cornie);
+        for(int i = 0; i<2; i++) {
+            row1.add(farmer1.plant(choice));
+        }
+        int expected = 2;
+
+        //Then
+
+        Assert.assertEquals(row1.size(),expected);
 
     }
 

@@ -22,7 +22,7 @@ public class Farmer extends Person implements Botanist, Rider {
     @Override
     public Crop plant(String typeOfCrop) {
 
-        if (typeOfCrop.toLowerCase(Locale.ROOT).equals("corn")){
+        if (typeOfCrop.toLowerCase(Locale.ROOT).equals("corn")||typeOfCrop.toLowerCase(Locale.ROOT).equals("cornstalk")){
             return new Cornstalk();
         }
         else {
