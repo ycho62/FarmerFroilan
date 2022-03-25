@@ -9,23 +9,17 @@ import java.util.ArrayList;
 
 public class Horse extends Animal implements Rideable {
 
-    public final String name;
-    public Horse(){
-        this.name = "JohnSnow";
-    }
-
-
     ArrayList<Person> riderList = new ArrayList<>();
 
     private Boolean mounted = false;
-
-    public Horse(){}
-
 
     public Horse(String name) {
         super(name);
     }
 
+    public Horse(){
+        super("JohnSnow");
+    }
 
     @Override
     public String makeNoise() {

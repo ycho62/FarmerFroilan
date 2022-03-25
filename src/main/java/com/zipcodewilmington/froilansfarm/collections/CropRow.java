@@ -3,20 +3,20 @@ package com.zipcodewilmington.froilansfarm.collections;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CropRow<T>  {
+public class CropRow<Crop>  {
 
-    List<T> crops = new ArrayList<T>();
+    List<Crop> crops = new ArrayList<>();
 
-    public void add(T crop){
+    public void add(Crop crop){
         crops.add(crop);
     }
 
-    public Boolean contains(T crop) {
+    public Boolean contains(Crop crop) {
         return crops.contains(crop);
     }
 
 
-    public T get(int index) {
+    public Crop get(int index) {
         return crops.get(index);
     }
 
