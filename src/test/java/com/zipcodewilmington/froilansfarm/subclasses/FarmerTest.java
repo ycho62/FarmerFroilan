@@ -1,6 +1,12 @@
 package com.zipcodewilmington.froilansfarm.subclasses;
 
 
+
+import com.zipcodewilmington.froilansfarm.collections.ChickenCoop;
+import com.zipcodewilmington.froilansfarm.collections.CropRow;
+import com.zipcodewilmington.froilansfarm.collections.Farm;
+import com.zipcodewilmington.froilansfarm.collections.Field;
+
 import com.zipcodewilmington.froilansfarm.collections.*;
 import com.zipcodewilmington.froilansfarm.superclasses.Vehicle;
 import org.junit.Assert;

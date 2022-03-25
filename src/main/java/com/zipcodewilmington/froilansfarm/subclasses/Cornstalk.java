@@ -7,6 +7,7 @@ import com.zipcodewilmington.froilansfarm.superclasses.Edible;
 public class Cornstalk extends Crop implements Produce {
     public Cornstalk() {}
 
+
     @Override
     public EarCorn yield() {
         if (!isHarvested()){

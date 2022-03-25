@@ -1,7 +1,12 @@
 package com.zipcodewilmington.froilansfarm.subclasses;
 
+import com.zipcodewilmington.froilansfarm.collections.CropRow;
+import com.zipcodewilmington.froilansfarm.collections.Field;
+import com.zipcodewilmington.froilansfarm.superclasses.Edible;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -69,6 +74,66 @@ class TractorTest {
         //Then
         Assert.assertTrue(tractorTonka.ridersList().isEmpty());
     }
+
+    @Test
+    public void harvestFieldTest(){
+
+        //Give
+        Farmer bob = new Farmer("Bob");
+        CropDuster dust1 = new CropDuster("dustie");
+        Tractor tonka = new Tractor("Tonka");
+
+        Field cropField = new Field();
+        CropRow cornstalkCropRow = new CropRow<>();
+        Cornstalk corn1 = new Cornstalk();
+        Cornstalk corn2 = new Cornstalk();
+        cornstalkCropRow.add(corn1);
+        cornstalkCropRow.add(corn2);
+        cropField.add(cornstalkCropRow);
+
+        //When
+        bob.mountVehicle(dust1);
+        dust1.flyTakeoff();
+        dust1.fertalize(cropField);
+
+        tonka.harvestCrop(cropField.getCropRow(0));
+
+        //Then
+        Assert.assertEquals(cropField.getCropRow(0).size(), 0);
+
+    }
+
+    @Test
+    public void harvestEdibles(){
+
+        //Give
+        Farmer bob = new Farmer("Bob");
+        CropDuster dust1 = new CropDuster("dustie");
+        Tractor tonka = new Tractor("Tonka");
+        ArrayList<Edible> harvestBasket = new ArrayList<>();
+
+        Field cropField = new Field();
+        CropRow cornstalkCropRow = new CropRow<>();
+        Cornstalk corn1 = new Cornstalk();
+        Cornstalk corn2 = new Cornstalk();
+        cornstalkCropRow.add(corn1);
+        cornstalkCropRow.add(corn2);
+        cropField.add(cornstalkCropRow);
+
+        //When
+        bob.mountVehicle(dust1);
+        dust1.flyTakeoff();
+        dust1.fertalize(cropField);
+        tonka.harvestCrop(cropField.getCropRow(0));
+        tonka.harvestEdible();
+
+        //Then
+        Assert.assertEquals(2, tonka.trunk.size());
+
+
+
+    }
+
 }
 
 
