@@ -1,12 +1,13 @@
 package com.zipcodewilmington.froilansfarm.collections;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 
 public class CropRow<Crop>  {
 
-    List<Crop> crops = new ArrayList<>();
+    List<Crop> crops = new ArrayList<Crop>();
 
     public void add(Crop crop){
         crops.add(crop);
@@ -16,6 +17,9 @@ public class CropRow<Crop>  {
         return crops.contains(crop);
     }
 
+    public void harvestCropRow(){
+        crops.clear();
+    }
 
     public Crop get(int index) {
         return crops.get(index);

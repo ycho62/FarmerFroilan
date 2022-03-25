@@ -5,6 +5,7 @@ import com.zipcodewilmington.froilansfarm.interfaces.Harvest;
 
 import com.zipcodewilmington.froilansfarm.superclasses.Crop;
 
+import com.zipcodewilmington.froilansfarm.superclasses.Edible;
 import com.zipcodewilmington.froilansfarm.superclasses.Person;
 
 import com.zipcodewilmington.froilansfarm.superclasses.Vehicle;
@@ -16,7 +17,7 @@ public class Tractor extends Vehicle implements Harvest {
 
     private Boolean mounted = false;
     List<Crop> tractorTrailer = new ArrayList<>();
-
+    List<Edible> trunk = new ArrayList<>();
 
     public Tractor(){
 
@@ -26,9 +27,20 @@ public class Tractor extends Vehicle implements Harvest {
         super(name);
     }
 
-    public void harvest(CropRow<Crop> cropRow){
+    public void harvestCrop(CropRow<Crop> cropRow){
 
+        for(int i = 0; i<cropRow.size(); i++){
+            tractorTrailer.add(cropRow.get(i));
+        }
 
+        cropRow.harvestCropRow();
+    }
+
+    public void harvestEdible(){
+
+        for (int i = 0; i<tractorTrailer.size(); i++){
+            trunk.add(tractorTrailer.get(i).yield());
+        }
     }
 
     @Override

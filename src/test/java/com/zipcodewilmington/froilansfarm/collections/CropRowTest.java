@@ -2,6 +2,7 @@ package com.zipcodewilmington.froilansfarm.collections;
 
 
 import com.zipcodewilmington.froilansfarm.subclasses.Cornstalk;
+import com.zipcodewilmington.froilansfarm.superclasses.Crop;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
@@ -13,7 +14,7 @@ class CropRowTest {
     @Test
     public void addToCropRowTest(){
         Cornstalk testCornstalk = new Cornstalk();
-        CropRow<Cornstalk> testCornRow = new CropRow<>();
+        CropRow<Crop> testCornRow = new CropRow<>();
         testCornRow.add(testCornstalk);
 
 
@@ -24,7 +25,7 @@ class CropRowTest {
     @Test
     public void getCropRowCropTest(){
         Cornstalk testCornstalk = new Cornstalk();
-        CropRow<Cornstalk> testCornRow = new CropRow<>();
+        CropRow<Crop> testCornRow = new CropRow<>();
         testCornRow.add(testCornstalk);
         assertTrue(testCornRow.get(0) instanceof Cornstalk);
 
