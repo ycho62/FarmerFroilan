@@ -1,16 +1,16 @@
 package com.zipcodewilmington.froilansfarm.superclasses;
 
-import com.zipcodewilmington.froilansfarm.collections.CropRow;
 import com.zipcodewilmington.froilansfarm.interfaces.Produce;
 
 public abstract class Crop implements Produce {
+    boolean isHarvested;
 
-
-
-    @Override
-    public Edible yield(Boolean yieldable) {
-        return null;
+    public boolean isHarvested() {
+        return isHarvested;
     }
 
-//    public List<T> getCrop () {return }
+    public void setHarvested(boolean harvested) {
+        isHarvested = harvested;
+    }
+
 }

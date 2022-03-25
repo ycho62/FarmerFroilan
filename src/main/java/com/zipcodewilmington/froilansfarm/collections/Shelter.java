@@ -18,6 +18,13 @@ public abstract class Shelter <T> {
         return residents.contains(animal);
     }
 
+    public T get(int index) {
+        return residents.get(index);
+    }
+
+    public int size() {
+        return residents.size();
+    }
 
     public List<T> getResidents() {
         return residents;

@@ -27,15 +27,5 @@ class ChickenCoopTest {
 
         Assert.assertTrue(chickenHouse.contains(chicky));
     }
-    @Test
-    public void chickenSpeaking() {
-
-        Chicken chicky = new Chicken();
-        ChickenCoop chickenHouse = new ChickenCoop();
-        chickenHouse.add(chicky);
-        List<Chicken> chickens = chickenHouse.getResidents();
-
-        Assert.assertTrue(chickenHouse.contains(chicky));
-    }
 
 }
