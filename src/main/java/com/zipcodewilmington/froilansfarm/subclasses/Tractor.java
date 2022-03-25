@@ -31,15 +31,16 @@ public class Tractor extends Vehicle implements Harvest {
 
         for(int i = 0; i<cropRow.size(); i++){
             tractorTrailer.add(cropRow.get(i));
+            cropRow.get(i).setHarvested(true);
         }
 
-        cropRow.harvestCropRow();
     }
 
     public void harvestEdible(){
 
         for (int i = 0; i<tractorTrailer.size(); i++){
             trunk.add(tractorTrailer.get(i).yield());
+            tractorTrailer.get(i).setHarvested(true);
         }
     }
 
