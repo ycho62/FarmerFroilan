@@ -139,9 +139,24 @@ class CropDusterTest {
         //When
         bob.mountVehicle(dust1);
         dust1.flyTakeoff();
-        //dust1.fertalize(cropField);
+        dust1.fertalize(cropField);
 
         //Then
+        Assert.assertTrue(cropField.getCrop(0,0).fertalizeStatus());
+
+
+
+    }
+
+    @Test
+    public void fertalizeTest(){
+        Field field = new Field();
+        CropRow<Crop> row = new CropRow();
+        Cornstalk cornie = new Cornstalk();
+        TomatoPlant tomAtoe = new TomatoPlant();
+        row.add(cornie);
+        row.add(tomAtoe);
+        field.add(row);
 
 
     }

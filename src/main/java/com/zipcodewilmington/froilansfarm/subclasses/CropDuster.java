@@ -63,6 +63,16 @@ public class CropDuster extends Aircraft {
     public Boolean getMountStatus() {return mounted;
     }
 
+    public void fertalize(Field cropField) {
+
+        for(int i = 0; i < cropField.size(); i++){
+            for(int j = 0; j < cropField.getCropRow(i).size(); j++){
+                cropField.getCrop(i,j).fertalizeMe();
+            }
+        }
+
+    }
+
     //public void fertalize(Field<CropRow> field) {
 
 //        for(int i = 0; i < field.size(); i++){

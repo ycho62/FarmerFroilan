@@ -18,4 +18,7 @@ public abstract class Crop implements Produce {
         isHarvested = harvested;
     }
 
+    public boolean fertalizeStatus() {
+        return isFertalized;
+    }
 }
