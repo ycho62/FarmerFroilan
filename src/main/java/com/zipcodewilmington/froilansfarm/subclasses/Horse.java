@@ -21,7 +21,6 @@ public class Horse extends Animal implements Rideable {
         super("JohnSnow");
     }
 
-
     @Override
     public String makeNoise() {
         return "Neigh!";

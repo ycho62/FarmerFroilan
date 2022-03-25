@@ -74,7 +74,7 @@ public class Farmer extends Person implements Botanist, Rider {
 
     @Override
     public <T extends Edible> void eat(T food) {
-
+        this.eatenMealsList().add(food);
     }
 
 }
