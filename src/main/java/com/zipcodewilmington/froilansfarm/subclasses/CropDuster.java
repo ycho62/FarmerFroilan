@@ -6,9 +6,10 @@ import com.zipcodewilmington.froilansfarm.superclasses.Person;
 public class CropDuster extends Aircraft {
 
     private Boolean mounted = false;
+    private Boolean flying = false;
 
     public CropDuster(){
-
+        super("Dustie");
     }
 
     public CropDuster(String name) {
@@ -17,13 +18,27 @@ public class CropDuster extends Aircraft {
 
 
     @Override
-    public void fly() {
+    public void flyTakeoff() {
+        if(ridersList().size()>0 && !flying){
+            flying = true;
+        }
+    }
 
+    @Override
+    public void flyLand() {
+        if(flying){
+            flying = false;
+        }
+    }
+
+    @Override
+    public Boolean flyStatus() {
+        return flying;
     }
 
     @Override
     public String makeNoise() {
-        return null;
+        return "Plane go brrrrr";
     }
 
 
@@ -42,7 +57,6 @@ public class CropDuster extends Aircraft {
     }
 
     @Override
-    public Boolean getMountStatus() {
-        return false;
+    public Boolean getMountStatus() {return mounted;
     }
 }

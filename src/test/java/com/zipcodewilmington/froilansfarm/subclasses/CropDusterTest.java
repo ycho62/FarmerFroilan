@@ -50,12 +50,75 @@ class CropDusterTest {
         //When
         bob.mountVehicle(dust1);
         bill.mountVehicle(dust1);
+        int expected = 2;
 
         //Then
-        Assert.assertTrue(dust1.ridersList().contains(bob));
+        Assert.assertEquals(expected,dust1.ridersList().size());
     }
 
 
+    @Test
+    public void mountStatusTest(){
+
+        //Give
+        Farmer bob = new Farmer("Bob");
+        CropDuster dust1 = new CropDuster("");
+
+        //When
+        bob.mountVehicle(dust1);
+
+        //Then
+        System.out.println(dust1.makeNoise());
+        Assert.assertTrue(dust1.getMountStatus());
+    }
+
+    @Test
+    public void dismountTest(){
+
+        //Give
+        Farmer bob = new Farmer("Bob");
+        CropDuster dust1 = new CropDuster("");
+
+        //When
+        bob.mountVehicle(dust1);
+        bob.dismountVehicle(dust1);
+
+        //Then
+        System.out.println(dust1.makeNoise());
+        Assert.assertFalse(dust1.getMountStatus());
+    }
+
+    @Test
+    public void flyTakeOffTest(){
+
+        //Give
+        Farmer bob = new Farmer("Bob");
+        CropDuster dust1 = new CropDuster("");
+
+        //When
+        bob.mountVehicle(dust1);
+        dust1.flyTakeoff();
+
+        //Then
+        Assert.assertTrue(dust1.flyStatus());
+
+    }
+
+    @Test
+    public void flyLandTest(){
+
+        //Give
+        Farmer bob = new Farmer("Bob");
+        CropDuster dust1 = new CropDuster("");
+
+        //When
+        bob.mountVehicle(dust1);
+        dust1.flyTakeoff();
+        dust1.flyLand();
+
+        //Then
+        Assert.assertFalse(dust1.flyStatus());
+    }
 
 }
 
