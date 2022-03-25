@@ -9,11 +9,14 @@ import static org.junit.Assert.assertTrue;
 
 class CropRowTest {
 
+
     @Test
     public void addToCropRowTest(){
         Cornstalk testCornstalk = new Cornstalk();
         CropRow<Cornstalk> testCornRow = new CropRow<>();
         testCornRow.add(testCornstalk);
+
+
 
         assertTrue(testCornRow.contains(testCornstalk));
     }

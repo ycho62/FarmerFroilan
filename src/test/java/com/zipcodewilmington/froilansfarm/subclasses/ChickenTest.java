@@ -10,7 +10,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class gChickenTest {
 
     @Test
-
     void eatTest() {
         Chicken testChicken = new Chicken();
         Tomato testEdible = new Tomato();
