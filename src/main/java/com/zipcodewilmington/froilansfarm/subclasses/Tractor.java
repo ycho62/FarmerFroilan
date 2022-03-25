@@ -27,21 +27,22 @@ public class Tractor extends Vehicle implements Harvest {
         super(name);
     }
 
-    public void harvestCrop(CropRow<Crop> cropRow){
+//    public void harvestCrop(CropRow<Crop> cropRow){
+//
+//        for(int i = 0; i<cropRow.size(); i++){
+//            tractorTrailer.add(cropRow.get(i));
+//            cropRow.get(i).setHarvested(true);
+//        }
+//
+//    }
 
-        for(int i = 0; i<cropRow.size(); i++){
-            tractorTrailer.add(cropRow.get(i));
-        }
-
-        cropRow.harvestCropRow();
-    }
-
-    public void harvestEdible(){
-
-        for (int i = 0; i<tractorTrailer.size(); i++){
-            trunk.add(tractorTrailer.get(i).yield());
-        }
-    }
+//    public void harvestEdible(){
+//
+//        for (int i = 0; i<tractorTrailer.size(); i++){
+//            trunk.add(tractorTrailer.get(i).yield());
+//            tractorTrailer.get(i).setHarvested(true);
+//        }
+//    }
 
     @Override
     public String makeNoise() {
@@ -68,9 +69,29 @@ public class Tractor extends Vehicle implements Harvest {
     }
 
 
-    @Override
-    public <T extends Crop> T harvestCrop(List<T> crops) {
+
+    public <T extends Crop> T harvestCrop2(List<T> crops) {
+
+        for (int i = 0; i<tractorTrailer.size(); i++){
+            trunk.add(crops.get(i).yield());
+            crops.get(i).setHarvested(true);
+        }
+
         return null;
+    }
+
+    @Override
+    public void harvestCrop(CropRow<Crop> cropRow) {
+
+        if(mounted){
+            for (int i = 0; i<cropRow.size(); i++){
+                trunk.add(cropRow.get(i).yield());
+                cropRow.get(i).setHarvested(true);
+            }
+        }
+        else{
+            System.out.println("No one in vehicle. Can't Harvest");
+        }
     }
 }
 

@@ -108,6 +108,7 @@ class TractorTest {
 
         //Give
         Farmer bob = new Farmer("Bob");
+        Farmer joe = new Farmer("Joe");
         CropDuster dust1 = new CropDuster("dustie");
         Tractor tonka = new Tractor("Tonka");
         ArrayList<Edible> harvestBasket = new ArrayList<>();
@@ -122,14 +123,13 @@ class TractorTest {
 
         //When
         bob.mountVehicle(dust1);
+        joe.mountVehicle(tonka);
         dust1.flyTakeoff();
         dust1.fertalize(cropField);
         tonka.harvestCrop(cropField.getCropRow(0));
-        tonka.harvestEdible();
 
         //Then
         Assert.assertEquals(2, tonka.trunk.size());
-
 
 
     }

@@ -1,9 +1,10 @@
 package com.zipcodewilmington.froilansfarm.interfaces;
 
+import com.zipcodewilmington.froilansfarm.collections.CropRow;
 import com.zipcodewilmington.froilansfarm.superclasses.Crop;
 
 import java.util.List;
 
 public interface Harvest {
-     public <T extends Crop> T harvestCrop(List<T> crops);
+     public void harvestCrop(CropRow<Crop> crops);
 }
