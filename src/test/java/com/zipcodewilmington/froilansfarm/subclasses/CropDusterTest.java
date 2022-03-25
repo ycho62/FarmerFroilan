@@ -148,18 +148,18 @@ class CropDusterTest {
 
     }
 
-    @Test
-    public void fertalizeTest(){
-        Field field = new Field();
-        CropRow<Crop> row = new CropRow();
-        Cornstalk cornie = new Cornstalk();
-        TomatoPlant tomAtoe = new TomatoPlant();
-        row.add(cornie);
-        row.add(tomAtoe);
-        field.add(row);
-
-
-    }
+//    @Test
+//    public void fertalizeTest(){
+//        Field field = new Field();
+//        CropRow<Crop> row = new CropRow();
+//        Cornstalk cornie = new Cornstalk();
+//        TomatoPlant tomAtoe = new TomatoPlant();
+//        row.add(cornie);
+//        row.add(tomAtoe);
+//        field.add(row);
+//
+//
+//    }
 }
 
 //Given

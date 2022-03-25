@@ -26,9 +26,13 @@ public class Tractor extends Vehicle implements Harvest {
         super(name);
     }
 
-    public void harvest(CropRow<Crop> cropRow){
+    public void harvestCrop(CropRow<Crop> cropRow){
 
+        for(int i = 0; i<cropRow.size(); i++){
+            tractorTrailer.add(cropRow.get(i));
+        }
 
+        cropRow.harvestCropRow();
     }
 
     @Override
