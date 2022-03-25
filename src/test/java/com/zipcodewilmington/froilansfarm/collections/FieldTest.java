@@ -14,7 +14,7 @@ class FieldTest {
         CropRow row = new CropRow();
         field.add(row);
 
-        assertTrue(field.contains(row));
+        Assert.assertTrue(field.contains(row));
     }
     @Test
     public void addCropRow2(){
@@ -22,7 +22,7 @@ class FieldTest {
         CropRow row = new CropRow();
         field.add(row);
 
-        assertTrue(field.contains(row));
+        Assert.assertTrue(field.contains(row));
     }
 
 }

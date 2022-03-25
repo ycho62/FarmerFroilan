@@ -11,7 +11,7 @@ class ChickenCoopTest {
 
     @Test
     public void addToChickenCoopTest() {
-        Chicken chicky = new Chicken("Fry");
+        Chicken chicky = new Chicken();
         ChickenCoop chickenHouse = new ChickenCoop();
         chickenHouse.add(chicky);
 
@@ -21,7 +21,7 @@ class ChickenCoopTest {
     @Test
     public void getChickenResidentsTest() {
         ChickenCoop chickenHouse = new ChickenCoop();
-        Chicken chicky = new Chicken("French");
+        Chicken chicky = new Chicken();
         chickenHouse.add(chicky);
         List<Chicken> chickens = chickenHouse.getResidents();
 
@@ -30,7 +30,8 @@ class ChickenCoopTest {
     @Test
     public void chickenSpeaking() {
 
-        Chicken chicky = new Chicken("French");
+        Chicken chicky = new Chicken();
+        ChickenCoop chickenHouse = new ChickenCoop();
         chickenHouse.add(chicky);
         List<Chicken> chickens = chickenHouse.getResidents();
 

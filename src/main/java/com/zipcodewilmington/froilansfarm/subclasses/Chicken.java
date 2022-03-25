@@ -7,11 +7,9 @@ import com.zipcodewilmington.froilansfarm.superclasses.Edible;
 public class Chicken extends Animal implements Produce {
     /** TODO fix the generic for produce
      * @param yieldable
-     * @return*/
-    public final String name;
-    public Chicken (String name) {
-        this.name = name;
-    }
+     * @return **/
+
+    public Chicken () {}
     @Override
     public Edible yield(Boolean yieldable) {
         return null;

@@ -8,7 +8,7 @@ class ChickenTest {
 
     @Test
     void yield() {
-        Chicken chicky = new Chicken("Wings");
+        Chicken chicky = new Chicken();
 
 
     }

@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.subclasses;
 
+import com.zipcodewilmington.froilansfarm.collections.Farm;
+import com.zipcodewilmington.froilansfarm.collections.Shelter;
 import com.zipcodewilmington.froilansfarm.interfaces.*;
 import com.zipcodewilmington.froilansfarm.superclasses.*;
 
@@ -15,6 +17,7 @@ public class Farmer extends Person implements Botanist, Rider {
     public Farmer(String name) {
         super(name);
     }
+
 
     @Override
     public Crop plant(String typeOfCrop) {
